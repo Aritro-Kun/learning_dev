@@ -1,1 +1,1 @@
-# learning_dsa
+I accord to learning in public.
