@@ -32,7 +32,6 @@ app.post("/user-auth", function(req, res){
     if (!response.success) {
         res.status(411).json({
             msg: 'There is something wrong with inputs.',
-            errors: response.error.errors,
         })
     } else {
         res.json({
