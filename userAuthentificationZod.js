@@ -14,12 +14,12 @@ const z = require("zod");
 
 const schema = z.object({
     email: z.string().email(),
-    password: z.string().min(),
+    password: z.string().min(6),
     country: z.literal("IN").or(z.literal("US"))
 })
 
 app.use(express.json());
-app.post("/health-checkup", function(req, res){
+app.post("/user-auth", function(req, res){
     const email = req.body.email;
     const password = req.body.password;
     const country = req.body.country;
